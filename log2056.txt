@@ -1,229 +1,243 @@
-Message sent to port 4056! Global time: 2023-03-06T03:05:26Z
+Message sent to port 3056! Global time: 2023-03-06T07:15:52Z
 Logical clock time: 1 
 
-Internal event! Global time: 2023-03-06T03:05:26Z
-Logical clock time: 2 
-
-Internal event! Global time: 2023-03-06T03:05:27Z
+Message received! Global time: 2023-03-06T07:15:53Z
+Message queue length: 1
 Logical clock time: 3 
 
-Internal event! Global time: 2023-03-06T03:05:27Z
+Message received! Global time: 2023-03-06T07:15:54Z
+Message queue length: 0
 Logical clock time: 4 
 
-Internal event! Global time: 2023-03-06T03:05:27Z
-Logical clock time: 5 
+Message received! Global time: 2023-03-06T07:15:55Z
+Message queue length: 1
+Logical clock time: 15 
 
-Internal event! Global time: 2023-03-06T03:05:27Z
-Logical clock time: 6 
-
-Internal event! Global time: 2023-03-06T03:05:28Z
-Logical clock time: 7 
-
-Message received! Global time: 2023-03-06T03:05:28Z
-Message queue length: 0
-Logical clock time: 10 
-
-Message received! Global time: 2023-03-06T03:05:28Z
-Message queue length: 0
-Logical clock time: 12 
-
-Internal event! Global time: 2023-03-06T03:05:28Z
-Logical clock time: 13 
-
-Message sent to port 4056! Global time: 2023-03-06T03:05:29Z
-Logical clock time: 14 
-
-Message received! Global time: 2023-03-06T03:05:29Z
-Message queue length: 0
+Message received! Global time: 2023-03-06T07:15:56Z
+Message queue length: 2
 Logical clock time: 17 
 
-Message sent to port 4056! Global time: 2023-03-06T03:05:29Z
-Logical clock time: 18 
+Message received! Global time: 2023-03-06T07:15:57Z
+Message queue length: 4
+Logical clock time: 19 
 
-Message received! Global time: 2023-03-06T03:05:29Z
-Message queue length: 0
-Logical clock time: 20 
-
-Internal event! Global time: 2023-03-06T03:05:30Z
-Logical clock time: 21 
-
-Message received! Global time: 2023-03-06T03:05:30Z
-Message queue length: 1
-Logical clock time: 22 
-
-Message received! Global time: 2023-03-06T03:05:30Z
-Message queue length: 0
+Message received! Global time: 2023-03-06T07:15:58Z
+Message queue length: 3
 Logical clock time: 23 
 
-Message received! Global time: 2023-03-06T03:05:30Z
-Message queue length: 0
+Message received! Global time: 2023-03-06T07:15:59Z
+Message queue length: 4
+Logical clock time: 25 
+
+Message received! Global time: 2023-03-06T07:16:00Z
+Message queue length: 3
 Logical clock time: 26 
 
-Message received! Global time: 2023-03-06T03:05:31Z
-Message queue length: 0
+Message received! Global time: 2023-03-06T07:16:01Z
+Message queue length: 3
 Logical clock time: 27 
 
-Message received! Global time: 2023-03-06T03:05:31Z
-Message queue length: 0
-Logical clock time: 28 
-
-Internal event! Global time: 2023-03-06T03:05:31Z
-Logical clock time: 29 
-
-Message received! Global time: 2023-03-06T03:05:31Z
-Message queue length: 0
-Logical clock time: 31 
-
-Message received! Global time: 2023-03-06T03:05:32Z
-Message queue length: 0
-Logical clock time: 33 
-
-Message received! Global time: 2023-03-06T03:05:32Z
-Message queue length: 0
-Logical clock time: 34 
-
-Internal event! Global time: 2023-03-06T03:05:32Z
-Logical clock time: 35 
-
-Message sent to port 3056! Global time: 2023-03-06T03:05:32Z
-Logical clock time: 36 
-
-Internal event! Global time: 2023-03-06T03:05:33Z
+Message received! Global time: 2023-03-06T07:16:02Z
+Message queue length: 2
 Logical clock time: 37 
 
-Internal event! Global time: 2023-03-06T03:05:33Z
-Logical clock time: 38 
-
-Message received! Global time: 2023-03-06T03:05:33Z
-Message queue length: 0
+Message received! Global time: 2023-03-06T07:16:03Z
+Message queue length: 3
 Logical clock time: 42 
 
-Internal event! Global time: 2023-03-06T03:05:33Z
-Logical clock time: 43 
-
-Internal event! Global time: 2023-03-06T03:05:34Z
-Logical clock time: 44 
-
-Internal event! Global time: 2023-03-06T03:05:34Z
-Logical clock time: 45 
-
-Internal event! Global time: 2023-03-06T03:05:34Z
-Logical clock time: 46 
-
-Message received! Global time: 2023-03-06T03:05:35Z
-Message queue length: 0
-Logical clock time: 50 
-
-Internal event! Global time: 2023-03-06T03:05:35Z
-Logical clock time: 51 
-
-Message received! Global time: 2023-03-06T03:05:35Z
-Message queue length: 0
+Message received! Global time: 2023-03-06T07:16:04Z
+Message queue length: 4
 Logical clock time: 52 
 
-Message sent to port 3056! Global time: 2023-03-06T03:05:35Z
-Logical clock time: 53 
-
-Internal event! Global time: 2023-03-06T03:05:36Z
-Logical clock time: 54 
-
-Message received! Global time: 2023-03-06T03:05:36Z
-Message queue length: 0
-Logical clock time: 57 
-
-Message sent to ports 3056 and 4056! Global time: 2023-03-06T03:05:36Z
-Logical clock time: 58 
-
-Internal event! Global time: 2023-03-06T03:05:36Z
-Logical clock time: 59 
-
-Message received! Global time: 2023-03-06T03:05:37Z
-Message queue length: 0
+Message received! Global time: 2023-03-06T07:16:05Z
+Message queue length: 4
 Logical clock time: 61 
 
-Internal event! Global time: 2023-03-06T03:05:37Z
-Logical clock time: 62 
-
-Message sent to ports 3056 and 4056! Global time: 2023-03-06T03:05:37Z
+Message received! Global time: 2023-03-06T07:16:06Z
+Message queue length: 3
 Logical clock time: 63 
 
-Message sent to port 4056! Global time: 2023-03-06T03:05:37Z
-Logical clock time: 64 
-
-Message received! Global time: 2023-03-06T03:05:38Z
-Message queue length: 0
-Logical clock time: 68 
-
-Message received! Global time: 2023-03-06T03:05:38Z
-Message queue length: 0
+Message received! Global time: 2023-03-06T07:16:07Z
+Message queue length: 3
 Logical clock time: 69 
 
-Message sent to port 4056! Global time: 2023-03-06T03:05:38Z
+Message received! Global time: 2023-03-06T07:16:08Z
+Message queue length: 3
 Logical clock time: 70 
 
-Message sent to ports 3056 and 4056! Global time: 2023-03-06T03:05:38Z
-Logical clock time: 71 
-
-Internal event! Global time: 2023-03-06T03:05:39Z
+Message received! Global time: 2023-03-06T07:16:09Z
+Message queue length: 3
 Logical clock time: 72 
 
-Message received! Global time: 2023-03-06T03:05:39Z
-Message queue length: 0
-Logical clock time: 75 
-
-Internal event! Global time: 2023-03-06T03:05:39Z
-Logical clock time: 76 
-
-Message received! Global time: 2023-03-06T03:05:39Z
-Message queue length: 1
-Logical clock time: 77 
-
-Message received! Global time: 2023-03-06T03:05:40Z
-Message queue length: 0
-Logical clock time: 78 
-
-Message sent to port 4056! Global time: 2023-03-06T03:05:40Z
-Logical clock time: 79 
-
-Internal event! Global time: 2023-03-06T03:05:40Z
-Logical clock time: 80 
-
-Message received! Global time: 2023-03-06T03:05:40Z
-Message queue length: 0
-Logical clock time: 84 
-
-Message received! Global time: 2023-03-06T03:05:41Z
-Message queue length: 0
+Message received! Global time: 2023-03-06T07:16:10Z
+Message queue length: 2
 Logical clock time: 85 
 
-Internal event! Global time: 2023-03-06T03:05:41Z
-Logical clock time: 86 
+Message received! Global time: 2023-03-06T07:16:11Z
+Message queue length: 1
+Logical clock time: 95 
 
-Internal event! Global time: 2023-03-06T03:05:41Z
-Logical clock time: 87 
-
-Internal event! Global time: 2023-03-06T03:05:41Z
-Logical clock time: 88 
-
-Message sent to ports 3056 and 4056! Global time: 2023-03-06T03:05:42Z
-Logical clock time: 89 
-
-Message received! Global time: 2023-03-06T03:05:42Z
-Message queue length: 0
-Logical clock time: 93 
-
-Message received! Global time: 2023-03-06T03:05:42Z
-Message queue length: 0
-Logical clock time: 94 
-
-Message received! Global time: 2023-03-06T03:05:42Z
+Message received! Global time: 2023-03-06T07:16:12Z
 Message queue length: 1
 Logical clock time: 96 
 
-Message received! Global time: 2023-03-06T03:05:43Z
-Message queue length: 0
-Logical clock time: 97 
+Message received! Global time: 2023-03-06T07:16:13Z
+Message queue length: 1
+Logical clock time: 117 
 
-Internal event! Global time: 2023-03-06T03:05:43Z
-Logical clock time: 98 
+Message received! Global time: 2023-03-06T07:16:14Z
+Message queue length: 1
+Logical clock time: 121 
+
+Message received! Global time: 2023-03-06T07:16:15Z
+Message queue length: 1
+Logical clock time: 127 
+
+Message received! Global time: 2023-03-06T07:16:16Z
+Message queue length: 0
+Logical clock time: 136 
+
+Message received! Global time: 2023-03-06T07:16:17Z
+Message queue length: 0
+Logical clock time: 145 
+
+Message received! Global time: 2023-03-06T07:16:18Z
+Message queue length: 1
+Logical clock time: 152 
+
+Message received! Global time: 2023-03-06T07:16:19Z
+Message queue length: 0
+Logical clock time: 153 
+
+Internal event! Global time: 2023-03-06T07:16:20Z
+Logical clock time: 154 
+
+Message received! Global time: 2023-03-06T07:16:21Z
+Message queue length: 0
+Logical clock time: 170 
+
+Message received! Global time: 2023-03-06T07:16:22Z
+Message queue length: 1
+Logical clock time: 175 
+
+Message received! Global time: 2023-03-06T07:16:23Z
+Message queue length: 1
+Logical clock time: 176 
+
+Message received! Global time: 2023-03-06T07:16:24Z
+Message queue length: 1
+Logical clock time: 180 
+
+Message received! Global time: 2023-03-06T07:16:25Z
+Message queue length: 1
+Logical clock time: 184 
+
+Message received! Global time: 2023-03-06T07:16:26Z
+Message queue length: 1
+Logical clock time: 194 
+
+Message received! Global time: 2023-03-06T07:16:27Z
+Message queue length: 0
+Logical clock time: 201 
+
+Message received! Global time: 2023-03-06T07:16:28Z
+Message queue length: 2
+Logical clock time: 209 
+
+Message received! Global time: 2023-03-06T07:16:29Z
+Message queue length: 2
+Logical clock time: 210 
+
+Message received! Global time: 2023-03-06T07:16:30Z
+Message queue length: 3
+Logical clock time: 212 
+
+Message received! Global time: 2023-03-06T07:16:31Z
+Message queue length: 3
+Logical clock time: 218 
+
+Message received! Global time: 2023-03-06T07:16:32Z
+Message queue length: 4
+Logical clock time: 221 
+
+Message received! Global time: 2023-03-06T07:16:34Z
+Message queue length: 3
+Logical clock time: 224 
+
+Message received! Global time: 2023-03-06T07:16:35Z
+Message queue length: 2
+Logical clock time: 226 
+
+Message received! Global time: 2023-03-06T07:16:36Z
+Message queue length: 2
+Logical clock time: 231 
+
+Message received! Global time: 2023-03-06T07:16:37Z
+Message queue length: 2
+Logical clock time: 232 
+
+Message received! Global time: 2023-03-06T07:16:38Z
+Message queue length: 1
+Logical clock time: 251 
+
+Message received! Global time: 2023-03-06T07:16:39Z
+Message queue length: 0
+Logical clock time: 257 
+
+Message received! Global time: 2023-03-06T07:16:40Z
+Message queue length: 0
+Logical clock time: 273 
+
+Message received! Global time: 2023-03-06T07:16:41Z
+Message queue length: 0
+Logical clock time: 282 
+
+Internal event! Global time: 2023-03-06T07:16:42Z
+Logical clock time: 283 
+
+Message received! Global time: 2023-03-06T07:16:43Z
+Message queue length: 0
+Logical clock time: 292 
+
+Internal event! Global time: 2023-03-06T07:16:44Z
+Logical clock time: 293 
+
+Message received! Global time: 2023-03-06T07:16:45Z
+Message queue length: 0
+Logical clock time: 305 
+
+Message received! Global time: 2023-03-06T07:16:46Z
+Message queue length: 1
+Logical clock time: 307 
+
+Message received! Global time: 2023-03-06T07:16:47Z
+Message queue length: 0
+Logical clock time: 309 
+
+Internal event! Global time: 2023-03-06T07:16:48Z
+Logical clock time: 310 
+
+Message received! Global time: 2023-03-06T07:16:49Z
+Message queue length: 4
+Logical clock time: 325 
+
+Message received! Global time: 2023-03-06T07:16:50Z
+Message queue length: 3
+Logical clock time: 326 
+
+Message received! Global time: 2023-03-06T07:16:51Z
+Message queue length: 3
+Logical clock time: 327 
+
+Message received! Global time: 2023-03-06T07:16:52Z
+Message queue length: 4
+Logical clock time: 328 
+
+Message received! Global time: 2023-03-06T07:16:53Z
+Message queue length: 3
+Logical clock time: 330 
+
+Message received! Global time: 2023-03-06T07:16:54Z
+Message queue length: 3
+Logical clock time: 340 
 

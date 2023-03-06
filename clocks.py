@@ -6,6 +6,7 @@ import threading
 import time
 from threading import Thread
 import random
+import matplotlib.pyplot as plt
 
 # TODO:
 # 1. Create unit tests.
@@ -91,6 +92,11 @@ def machine(config, allPorts):
 	print(f"Process {os.getpid()} running at {tickSize} ticks per second.")
 
 	logClock = 0
+
+	# Store information about the clock ticks in an array that can be plotted.
+	currTime = time.time()
+	sizePerSecond = []
+
 	with open(f"log{PORT}.txt", "w") as f:
 		while True:
 
@@ -132,6 +138,20 @@ def machine(config, allPorts):
 				response += f"Global time: {time.strftime('%Y-%m-%dT%H:%M:%SZ', time.gmtime())}\n"
 				response += f"Logical clock time: {logClock} \n\n"
 				f.write(response)
+
+			if time.time() - currTime > 1:
+				sizePerSecond.append(len(messages))
+				currTime = time.time()
+
+			# Plot after a minute
+			if len(sizePerSecond) > 60:
+				secs = range(1, len(sizePerSecond) + 1)
+				plt.plot(secs, sizePerSecond)
+				plt.xlabel("Seconds")
+				plt.ylabel("Message Queue Size")
+				plt.legend([f"Ticks per second: {tickSize}"])
+				plt.savefig(f"plot{PORT}.png")
+				return
 
 			time.sleep(sleepVal)
 
