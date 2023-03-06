@@ -6,9 +6,11 @@ import threading
 import time
 from threading import Thread
 import random
- 
-# Dictionary that stores messages for all of the currently running processes.
-messages = {}
+
+# TODO:
+# 1. Create unit tests.
+# 2. Work out if "consumer" thread is working 100% properly.
+# 3. Add additional print statements / log statements to make our analysis easier.
 
 # Questions: 
 # 1. What do unit tests look like for this assignment?
@@ -18,170 +20,120 @@ messages = {}
 # 5. What connections are made within your implementation? Are those connections just within machines?
 # 6. How would we go about making connections between machines?
 
-def consumer(conn, port):
+def consumer(conn):
 	print("consumer accepted connection" + str(conn)+"\n")
 	sleepVal = 0.0500
+
+	# Constantly listen for messages, with minimal sleep in between.
 	while True:
 		time.sleep(sleepVal)
 		data = conn.recv(1024)
-		print("msg received\n")
 		dataVal = data.decode('ascii')
-		print("msg received:", dataVal)
-		messages[port].append(dataVal)
+
+		# Only add messages to queue if non-empty.
+		if dataVal != "":
+			messages.append(dataVal)
  
 
-def producer(portVal, tickSize):
-	host= "127.0.0.1"
-	port = int(portVal)
-	s = socket.socket(socket.AF_INET,socket.SOCK_STREAM)
+def init_machine(config):
 
-	# if we tick n times in a second, our sleepVal must be 1/n
-	sleepVal = 1 / tickSize
-
-	#sema acquire
-	try:
-		s.connect((host,port))
-		print("Client-side connection success to port val:" + str(portVal) + "\n")
- 
-		while True:
-			codeVal = str(code)
-			time.sleep(sleepVal)
-			s.send(codeVal.encode('ascii'))
-			print("msg sent", codeVal)
-
-			# Check if empty or not empty
-
-			# generate rand number
-
-			# Do the appropriate thing
-
-	except socket.error as e:
-		print ("Error connecting producer: %s" % e)
- 
-
-# def init_machine(config):
-# 	HOST = str(config[0])
-# 	PORT = int(config[1])
-# 	print("starting server | port val:", PORT)
-# 	s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-# 	s.bind((HOST, PORT))
-# 	s.listen()
-# 	while True:
-# 		conn, addr = s.accept()
-# 		start_new_thread(consumer, (conn,))
- 
-
-def machine(config, allPorts):
-	config.append(os.getpid())
-	global code
-	#print(config)
-
-	# starting the server
-
+	# Extract host and port from config.
 	HOST = str(config[0])
 	PORT = int(config[1])
+
+	# Run the server and accept incoming connection requests.
 	print("starting server | port val:", PORT)
 	s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 	s.bind((HOST, PORT))
 	s.listen()
-	#add delay to initialize the server-side logic on all processes
+	while True:
+		conn, addr = s.accept()
+		start_new_thread(consumer, (conn,))
+ 
+
+def machine(config, allPorts):
+	config.append(os.getpid())
+
+	# Messages queue that is shared throughout the process.
+	global messages
+	messages = []
+
+	# Initialize the server at this port, and wait for the others to complete.
+	init_thread = Thread(target=init_machine, args=(config,))
+	init_thread.start()
 	time.sleep(5)
 	
-	# create a producer thread for as many as exist in config
-	# prod_thread = Thread(target=producer, args=(config[2], config[-2],))
-	# prod_thread.start()
+	# Extract host and port from config.
+	HOST = str(config[0])
+	PORT = int(config[1])
 
-	# figure out what ports are not the current port
-	ports = [port for port in allPorts if port != PORT]
+	# Determine all ports that are not the current port
+	ports = [int(port) for port in allPorts if port != PORT]
 
+	# List of potential sockets to send messages to.
 	sockets = []
-	# for each port:
-	# create a socket that will connect to that port, and add it to the list of sockets
-	# while True with our ticksize delay:
-	# we either unpack a message from the queue, or roll 1-10 and act accordingly
-	# note that we can use sockets[1].send() to send a message to the first, sockets[2].send() for the second
-	# and both to send to both 
 
-
-	#sema acquire
-	# for port in ports: do the below, and make sure to add socket to list of sockets
-	# host= "127.0.0.1"
-	# port = int(portVal)
-
+	# Connect to all ports except the process's port.
 	for port in ports:
 		s = socket.socket(socket.AF_INET,socket.SOCK_STREAM)
-
 		try:
 			s.connect((HOST,port))
 			sockets.append(s)
 			print("Client-side connection success to port val:" + str(port) + "\n")
-	
-			# while True:
-			# 	codeVal = str(code)
-			# 	time.sleep(sleepVal)
-			# 	s.send(codeVal.encode('ascii'))
-			# 	print("msg sent", codeVal)
-
-				# Check if empty or not empty
-
-				# generate rand number
-
-				# Do the appropriate thing
 
 		except socket.error as e:
 			print ("Error connecting producer: %s" % e)
 
 
-	# if we tick n times in a second, our sleepVal must be 1/n
+	# If we tick n times in a second, our sleepVal must be 1/n
 	tickSize = int(config[2])
 	sleepVal = 1 / tickSize
-
-	count = 0
-	while count < 2:
-		conn, addr = s.accept()
-		start_new_thread(consumer, (conn, PORT,))
-		count += 1
+	print(f"Process {os.getpid()} running at {tickSize} ticks per second.")
 
 	logClock = 0
-	while True:
-		code = random.randint(1,10)
-		if len(messages[port]) > 0:
-			msg = int(messages[port].pop(0))
-			logClock = max(logClock, msg) + 1
-			with open(f"log{PORT}.txt", "a") as f:
+	with open(f"log{PORT}.txt", "w") as f:
+		while True:
+
+			# Generate a random code 1-10.
+			code = random.randint(1,10)
+
+			# Pop a message from the queue if there are messages.
+			if len(messages) > 0:
+				msg = int(messages.pop(0))
+				logClock = max(logClock, msg) + 1
 				response = f"Message received! Global time: {time.strftime('%Y-%m-%dT%H:%M:%SZ', time.gmtime())}\n"
-				response += f"Message queue length: {len(messages[PORT])}\n"
+				response += f"Message queue length: {len(messages)}\n"
 				response += f"Logical clock time: {logClock} \n\n"
 				f.write(response)
 
-		elif code == 1 or code == 2:
-			sockets[code - 1].send(str(logClock).encode('ascii'))
-			logClock += 1
-			with open(f"log{PORT}.txt", "a") as f:
+			# Send a message to one of the other machines.
+			elif code == 1 or code == 2:
+				sockets[code - 1].send(str(logClock).encode('ascii'))
+				logClock += 1
 				response = f"Message sent to port {ports[code - 1]}! " 
 				response += f"Global time: {time.strftime('%Y-%m-%dT%H:%M:%SZ', time.gmtime())}\n"
 				response += f"Logical clock time: {logClock} \n\n"
 				f.write(response)
 
-		elif code == 3:
-			sockets[0].send(str(logClock).encode('ascii'))
-			sockets[1].send(str(logClock).encode('ascii'))
-			logClock += 1
-			with open(f"log{PORT}.txt", "a") as f:
+			# Send a message to both other machines.
+			elif code == 3:
+				sockets[0].send(str(logClock).encode('ascii'))
+				sockets[1].send(str(logClock).encode('ascii'))
+				logClock += 1
 				response = f"Message sent to ports {ports[0]} and {ports[1]}! " 
 				response += f"Global time: {time.strftime('%Y-%m-%dT%H:%M:%SZ', time.gmtime())}\n"
 				response += f"Logical clock time: {logClock} \n\n"
 				f.write(response)
-		
-		else:
-			logClock += 1
-			with open(f"log{PORT}.txt", "a") as f:
+			
+			# Register an internal event.
+			else:
+				logClock += 1
 				response = f"Internal event! " 
 				response += f"Global time: {time.strftime('%Y-%m-%dT%H:%M:%SZ', time.gmtime())}\n"
 				response += f"Logical clock time: {logClock} \n\n"
 				f.write(response)
 
-		time.sleep(sleepVal)
+			time.sleep(sleepVal)
 
 
 
@@ -191,10 +143,9 @@ if __name__ == '__main__':
 	localHost= "127.0.0.1"
 	ports = [2056, 3056, 4056]
 
-	for port in ports:
-		messages[port] = []
-
+	# Define clock speed for each of the 3 processes.
 	randTimes = [random.randint(1, 6) for _ in range(3)]
+
 	config1=[localHost, ports[0], randTimes[0]]
 	p1 = Process(target=machine, args=(config1,ports,))
 	config2=[localHost, ports[1], randTimes[1]]
