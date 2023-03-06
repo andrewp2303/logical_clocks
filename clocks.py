@@ -18,9 +18,8 @@ messages = {}
 # 5. What connections are made within your implementation? Are those connections just within machines?
 # 6. How would we go about making connections between machines?
 
-def consumer(conn):
+def consumer(conn, port):
 	print("consumer accepted connection" + str(conn)+"\n")
-	msg_queue = []
 	sleepVal = 0.0500
 	while True:
 		time.sleep(sleepVal)
@@ -28,7 +27,7 @@ def consumer(conn):
 		print("msg received\n")
 		dataVal = data.decode('ascii')
 		print("msg received:", dataVal)
-		msg_queue.append(dataVal)
+		messages[port].append(dataVal)
  
 
 def producer(portVal, tickSize):
@@ -72,7 +71,7 @@ def producer(portVal, tickSize):
 # 		start_new_thread(consumer, (conn,))
  
 
-def machine(config):
+def machine(config, allPorts):
 	config.append(os.getpid())
 	global code
 	#print(config)
@@ -93,9 +92,9 @@ def machine(config):
 	# prod_thread.start()
 
 	# figure out what ports are not the current port
-	# ports = []
+	ports = [port for port in allPorts if port != PORT]
 
-	# sockets = []
+	sockets = []
 	# for each port:
 	# create a socket that will connect to that port, and add it to the list of sockets
 	# while True with our ticksize delay:
@@ -106,55 +105,102 @@ def machine(config):
 
 	#sema acquire
 	# for port in ports: do the below, and make sure to add socket to list of sockets
-	host= "127.0.0.1"
-	port = int(portVal)
-	s = socket.socket(socket.AF_INET,socket.SOCK_STREAM)
+	# host= "127.0.0.1"
+	# port = int(portVal)
 
-	try:
-		s.connect((host,port))
-		print("Client-side connection success to port val:" + str(portVal) + "\n")
- 
-		while True:
-			codeVal = str(code)
-			time.sleep(sleepVal)
-			s.send(codeVal.encode('ascii'))
-			print("msg sent", codeVal)
+	for port in ports:
+		s = socket.socket(socket.AF_INET,socket.SOCK_STREAM)
 
-			# Check if empty or not empty
+		try:
+			s.connect((HOST,port))
+			sockets.append(s)
+			print("Client-side connection success to port val:" + str(port) + "\n")
+	
+			# while True:
+			# 	codeVal = str(code)
+			# 	time.sleep(sleepVal)
+			# 	s.send(codeVal.encode('ascii'))
+			# 	print("msg sent", codeVal)
 
-			# generate rand number
+				# Check if empty or not empty
 
-			# Do the appropriate thing
+				# generate rand number
 
-	except socket.error as e:
-		print ("Error connecting producer: %s" % e)
+				# Do the appropriate thing
+
+		except socket.error as e:
+			print ("Error connecting producer: %s" % e)
 
 
 	# if we tick n times in a second, our sleepVal must be 1/n
+	tickSize = int(config[2])
 	sleepVal = 1 / tickSize
-	while True:
+
+	count = 0
+	while count < 2:
 		conn, addr = s.accept()
-		start_new_thread(consumer, (conn,))
-		code = random.randint(1,3)
+		start_new_thread(consumer, (conn, PORT,))
+		count += 1
+
+	logClock = 0
+	while True:
+		code = random.randint(1,10)
+		if len(messages[port]) > 0:
+			msg = int(messages[port].pop(0))
+			logClock = max(logClock, msg) + 1
+			with open(f"log{PORT}.txt", "a") as f:
+				response = f"Message received! Global time: {time.strftime('%Y-%m-%dT%H:%M:%SZ', time.gmtime())}\n"
+				response += f"Message queue length: {len(messages[PORT])}\n"
+				response += f"Logical clock time: {logClock} \n\n"
+				f.write(response)
+
+		elif code == 1 or code == 2:
+			sockets[code - 1].send(str(logClock).encode('ascii'))
+			logClock += 1
+			with open(f"log{PORT}.txt", "a") as f:
+				response = f"Message sent to port {ports[code - 1]}! " 
+				response += f"Global time: {time.strftime('%Y-%m-%dT%H:%M:%SZ', time.gmtime())}\n"
+				response += f"Logical clock time: {logClock} \n\n"
+				f.write(response)
+
+		elif code == 3:
+			sockets[0].send(str(logClock).encode('ascii'))
+			sockets[1].send(str(logClock).encode('ascii'))
+			logClock += 1
+			with open(f"log{PORT}.txt", "a") as f:
+				response = f"Message sent to ports {ports[0]} and {ports[1]}! " 
+				response += f"Global time: {time.strftime('%Y-%m-%dT%H:%M:%SZ', time.gmtime())}\n"
+				response += f"Logical clock time: {logClock} \n\n"
+				f.write(response)
+		
+		else:
+			logClock += 1
+			with open(f"log{PORT}.txt", "a") as f:
+				response = f"Internal event! " 
+				response += f"Global time: {time.strftime('%Y-%m-%dT%H:%M:%SZ', time.gmtime())}\n"
+				response += f"Logical clock time: {logClock} \n\n"
+				f.write(response)
+
+		time.sleep(sleepVal)
 
 
-localHost= "127.0.0.1"
 
 
 if __name__ == '__main__':
-	port1 = 2056
-	port2 = 3056
-	port3 = 4056
 
-	messages[port1] = []
+	localHost= "127.0.0.1"
+	ports = [2056, 3056, 4056]
+
+	for port in ports:
+		messages[port] = []
 
 	randTimes = [random.randint(1, 6) for _ in range(3)]
-	config1=[localHost, port1, port2, randTimes[0]]
-	p1 = Process(target=machine, args=(config1,))
-	config2=[localHost, port1, port3, randTimes[1]]
-	p2 = Process(target=machine, args=(config2,))
-	config3=[localHost, port3, port2, randTimes[2]]
-	p3 = Process(target=machine, args=(config3,))
+	config1=[localHost, ports[0], randTimes[0]]
+	p1 = Process(target=machine, args=(config1,ports,))
+	config2=[localHost, ports[1], randTimes[1]]
+	p2 = Process(target=machine, args=(config2,ports,))
+	config3=[localHost, ports[2], randTimes[2]]
+	p3 = Process(target=machine, args=(config3,ports,))
 
 
 	p1.start()
