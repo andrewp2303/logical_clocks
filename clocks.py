@@ -155,9 +155,6 @@ def machine(config, allPorts):
 
 			time.sleep(sleepVal)
 
-
-
-
 if __name__ == '__main__':
 
 	localHost= "127.0.0.1"
