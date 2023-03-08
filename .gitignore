@@ -143,7 +143,6 @@ dmypy.json
 *.blg
 .DS_Store
 __pycache__
-*56.txt
-*seconds.txt
+output*.txt
 *queue.txt
 *.png
