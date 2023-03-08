@@ -37,29 +37,35 @@
 %----------------------------------------------------------------------------------------
 
 \section{I. Introduction}
-In our design exercise, we implemented a model of a small, asynchronous distributed system. In this system, each of the three simulated machines run at different clock rates assigned randomly at initialization. Each machine listens on a socket for incoming messages from other machines and updates the corresponding logical clock and message queue for each machine. In this engineering notebook, we intend to describe our design decisions and the results from the following experiments:
+In our design exercise, we implemented a model of a small, asynchronous distributed system. In this system, each of the three simulated machines run at different clock rates assigned randomly at initialization. Each machine listens on a socket for incoming messages from other machines and updates its corresponding logical clock and message queue. In this engineering notebook, we intend to describe our design decisions when building this model, and the results from the following experiments:
 \begin{itemize}
     \item Five iterations of the scale model for exactly one minute. 
     \item A single run of the scale model for two minutes.
-    \item Modifying the the probabilities that machines send messages to other machines. 
+    \item Three trials where we modify the probabilities that machines send messages to other machines. 
 \end{itemize}
 
 The source code for our chat application can be found \href{https://github.com/andrewp2303/logical_clocks}{here}.
 
 \section{II. Model Distributed System Design}
 
-Building our scale model for the simulated machines required implementing a protocol for the three machines to communicate. Otherwise, it would be impossible to receive logical clock information, send messages, or update the message queue. Thus, the first question Andrew and I sought to answer in the design process was what protocol we wanted to implement for our scale model. 
+Building our scale model for the simulated machines required implementing a protocol for the three machines to communicate. Otherwise, it would be impossible to receive logical clock information, send messages, or update the message queue. Thus, the first question we sought to answer in the design process was what protocol we wanted to implement for our scale model. 
 
-Initially, Andrew and I were inclined to implement our communication protocol using a simple peer-to-peer (P2P) networking library such as \href{https://pypi.org/project/pyp2p/}{Python's P2P}. The idea of P2P networking was appealing since there would be no single point of failure;  each machine could act as both a client and server, allowing for a more dynamic and flexible system. Additionally, with P2P, we thought that we could cut the number of connections in half because every connection would be bidirectional. 
+Initially, we were inclined to implement our communication protocol using a simple peer-to-peer (P2P) networking library such as \href{https://pypi.org/project/pyp2p/}{Python's P2P}. The idea of P2P networking was appealing since there would be no single point of failure;  each machine could act as both a client and server, allowing for a more dynamic and flexible system. Additionally, with P2P, we thought that we could cut the number of connections in half because every connection would be bidirectional. 
 
 However, we decided to use web sockets instead for a couple of reasons: 
 \begin{itemize}
     \item By using web sockets, we could partially reuse implementations from the first design project instead of learning P2P networking for the first time for this project. 
     \item The problem specification recommended that each machine in the simulation send and receive information using web sockets. 
-    \item Completely decentralizing communication is not realistic, especially at scale. It is far easier to accomodate more machines in a distributed system without dramatically revamping the code base when machines can ping a server without anything other than an endpoint. 
+    \item Completely decentralizing communication is not realistic, especially at scale. It is far easier to accommodate more machines in a distributed system without dramatically revamping the code base when machines can ping a server with just one endpoint. Thus, we wanted to make something that emulated the pairwise nature of P2P networks, while using sockets to ensure extensibility to a centralized model when issues of scale arose.
 \end{itemize}
 
-Instead of using a P2P system, we decided to implement a server and a client on each machine. In our code, the server exclusively listens for messages from other machines and the client sends messages to other machines in the model. Since we implemented the previous design project in Python, we did the same for this design project as well. 
+For these reasons, instead of using a P2P system we decided to have each machine create 2 socket connections --- one to each of the other machines. Additionally, each machine has one socket "server," which is used exclusively to listen for incoming messages using $consumer$ threads. Furthermore, the other two sockets are used exclusively to send outgoing messages to the other machines in the model. Since we implemented the previous design project in Python, we did the same for this design project as well. 
+
+Finally, a pivotal design decision we made was deciding to implement our exercise with pairwise socket connections, instead of using a centralized server. Here were some of the considerations for doing so: 
+\begin{itemize}
+    \item We noted that using a centralized server would greatly reduce our initialization costs --- we would only need to form $n$ socket connections (in this case 3), as opposed to $2{n \choose 2}$ (in this case 6) if we wanted to connect every machine to every other machine. Note that the second option is an order of magnitude more expensive, but that this is still a one-time cost. 
+    \item We then noted that the runtime costs of using a server would be twice as high, because the server would need to both receive and distribute messages. This would be reasonable if we had a very powerful server, but in this exercise we assumed machines that were performing similarly. Thus, as we see in the experiments later on, if we labeled one of the machines as the server it could result in that machine being unable to manage every machine's request --- this would constitute a bottleneck and a single point of failure, instead of independent failures of each machine and distributed transactions. This was the deciding factor for our decision-making, since the risk of extreme slowdowns or even total failure far outweighed the benefit of a lowered initialization cost.
+\end{itemize}
 
 \section{III. Five Scale Model Iterations}
 
@@ -67,8 +73,11 @@ We ran five simulations of our model distributed system, each for approximately 
     
 Initially, we logged the message queue size and logical clock time using Python's time module. However, unreliability in the time module and differences across machines prompted us to utilize the tick times from the simulations themselves. We initialized a variable, \texttt{currTime}, to 0 at the start of every thread. Then, at every operation, we incremented \texttt{currTime} until it hit the randomly generated \texttt{tickSize} for each machine. Then, we set \texttt{currTime} to 0 once again, repeating the process. Since each machine runs at a clock rate of 0 to 6 ticks per second, we were effectively able to simulate one "real" second on each simulated machine to log any necessary values for producing our graphs. 
 
-We generated the following graphs for each trial: 
+On the next page, we illustrate our 5 trials of this experiment from the exercise specification, including the clock speed of each process for each experiment.  
 
+\newpage
+$$ $$
+\newpage
 \includegraphics[width=7.8cm]{assets/t1_clock.png}
 \includegraphics[width=7.8cm]{assets/t2_clock.png}
 \includegraphics[width=7.8cm]{assets/t3_clock.png}
@@ -84,14 +93,14 @@ We generated the following graphs for each trial:
 
 After experimenting with our scale models and analyzing the above graphs, we noticed the following important trends: 
 \begin{itemize}
-    \item Processes runnning with less ticks per second had much larger jumps in logical clock time. This is best illustrated on the graph for trial 3 where process 1 ran at 1 tick / second, process 2 ran at 3 ticks / second, and process 3 ran at 2 ticks / second. The line for process 1 is the most jagged, demonstrating larger deviations  from the line of best fit. The line for process 3 is the second most jagged, with the line for process 2 following after. The jaggedness in these lines exponentially reduces, demonstrating that faster tick speeds also reduce variations in logical clock time. 
-    \item Processes running with less ticks per second also struggled to manage the message queue size. This is illustrated well in the message queue graph for trial 1, where every process except the one running at 2 ticks / second had a queue length of 0 for the entirety of the simulation. This is logical because systems operating at a slower clock speed struggle to process inbound messages of peers running at comparatively higher clock speed that also send more messages.
-    \item The behavior for the logical clock and message queue size radically changes when two processes are running at a much higher speed than the other process. In Trial 5, for example, two processes are running at 5 ticks / second while the remaining process is running at 1 tick / second. For the slowest process, the message queue continues to fill up and accumulate because the process can deal with only one message at a time. Even though the ending logical clock number for the slowest process is much less than the ending logical clock number for the faster processes, causality still exists but the slowest process can't process the messages fast enough.
+    \item Processes runnning at fewer ticks per second had much larger jumps in logical clock time. This is best illustrated on the graph for trial 3 where process 1 ran at 1 tick / second, process 2 ran at 3 ticks / second, and process 3 ran at 2 ticks / second. The line for process 1 is the most jagged, demonstrating larger deviations  from the top line. The line for process 3 is the second most jagged, with the line for process 2 setting an effective linear upper bound for logical clock time. The jaggedness/variance in these lines exponentially reduces, demonstrating that faster tick speeds also reduce variations in logical clock time. This makes sense, because the fastest machine should usually lead the rest of the machines, explaining why the fastest machine appears as linear.
+    \item Processes running at fewer ticks per second also struggled to manage the message queue. This is illustrated well in the message queue graph for trial 1, where every process except the one running at 2 ticks / second had a queue length of 0 for the entirety of the simulation. This is logical because systems operating at a slower clock speed struggle to process inbound messages of peers running at comparatively higher clock speeds, thus sending more messages. Notice that in this case, the queue size still oscillates from 0 to some constant --- this is acceptable behavior, since the logical clocks stay mostly in sync relative to real time. This indicates that message queue buildup is due not only to the rate at which other machines run, but also the probability that they will send a given machine a message on each run. 
+    \item The behavior for the logical clock and message queue size radically changes when two processes are running at a much higher speed than the other process. In Trial 5, for example, two processes are running at 5 ticks / second while the remaining process is running at 1 tick / second. For the slowest process, the message queue continues to fill up and accumulate because the process can deal with only one message per second, but it's being sent an expected 2 messages per second. Thus, even though the logical clock is still technically working and Process 2 is respecting the causality of messages that were sent to it, we know from a gods-eye view that even after a minute there is a very significant discrepancy between logical clock times at the current real time. This shows that discrepancies in logical clock vs. real time correspond directly to buildup in a message queue.
 \end{itemize}
 
 \section{IV. Longer Scale Model Iterations}
 
-Per the assignment recommendation, we ran another iteration of our model for 2 minutes instead of 1 minute to verify the behavior of the logical clock and message queue size. We generated the following graphs for our longer iteration: 
+In order to test our model further, we ran several extended tests, including another iteration for 2 minutes instead of 1 minute to verify the behavior of the logical clock and message queue size. We generated the following graphs for this longer iteration: 
 
 \includegraphics[width=7.8cm]{assets/t6_clock.png}
 \includegraphics[width=7.8cm]{assets/t6_size.png}
@@ -113,7 +122,7 @@ We generated the following graphs:
 
 From these graphs, we noticed the following important trends: 
 \begin{itemize}
-    \item When there is a higher hit rate, the message queue loads up at a faster rate than observed in trials 1-5. An example that illustrates this is trial 7. Here, there are two extremely fast processes with clock rates of 6 ticks / second and one extremely slow process with a clock rate of 1 tick / second. The lag from the slow process is incredibly large, with the process reaching less than half the logical clock time as the 6 ticks / second processes over the same time interval. Like in trial 5, causality is preserved, but the slow process is spammed to the point where it is still handling old message requests.
+    \item When there is a higher hit rate, the message queue loads up at a faster rate than observed in trials 1-5. An example that illustrates this is trial 7. Here, there are two extremely fast processes with clock rates of 6 ticks / second and one extremely slow process with a clock rate of 1 tick / second. The lag from the slow process is incredibly large, with the process reaching less than half the logical clock time as the 6 ticks / second processes over the same time interval. Like in trial 5, causality is preserved, but the slow process is spammed to the point where it is stuck handling old message requests.
     \item The message queue varies more when the differences in the clock rate are more extreme. However, the message queue variations aren't as pronounced when the differences in the clock rate aren't extreme. 
     \item The logical clock of the slowest process is able to keep up with substantially faster processes when the hit rate is lower. This is shown in trial 9 where the two fast processes run at 5 ticks / second and 4 ticks / second, while the slow process runs at 1 tick / second. Despite this variance in clock speeds, the slow process and the faster processes have the same logical clock time after the 1 minute period. In trials 5 and 7, however, the message queue was overloaded and the logical clock of the slowest process was not able to keep up with the faster processes over the same time interval. 
     
@@ -141,7 +150,7 @@ def assertConfig(config):
 	assert(type(config[1]) == int)
 	assert(config[1] >= 0 and 
 		config[1] <= 65535)
-	assert(type(config[1]) == int)
+	assert(type(config[2]) == int)
 	assert(config[2] >= 1)
 \end{python}
 
@@ -153,7 +162,8 @@ We also made sure to test the "payload" upon reception through a socket connecti
 
 We noted that since our logical clock is declared as an integer, this remains invariant, and thus we didn't need to test whether messages were well-formed, because they were just the logical clock value. However, in every area of the code where such claims were less obvious, we made sure to add assertions (all of which passed during runtime). 
 
-Additionally, we used the try-except structure when connecting to sockets, and returned an error message, adding robustness to our program. We also performed other validations, such as checking whether a message received in a consumer thread was empty before adding it to the message queue. Here is one example of the former below:
+Additionally, we used the try-except structure when connecting to sockets, and returned an error message, adding robustness to our program. We also performed other validations, such as checking whether a message received in a consumer thread was empty before adding it to the message queue. 
+\newpage Here is one example of the former below:
 \begin{python}
 try:
 	s.connect((HOST,port))

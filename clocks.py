@@ -167,7 +167,7 @@ def assertConfig(config):
 	# Check that port is in valid range, and that tick size is at least 1.
 	assert(type(config[1]) == int)
 	assert(config[1] >= 0 and config[1] <= 65535)
-	assert(type(config[1]) == int)
+	assert(type(config[2]) == int)
 	assert(config[2] >= 1)
 
 
