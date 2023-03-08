@@ -143,3 +143,4 @@ dmypy.json
 *.blg
 .DS_Store
 __pycache__
+*.txt
