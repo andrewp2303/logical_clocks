@@ -1,0 +1,9 @@
+python>=3.9.7
+pip>=9.0.1
+threading
+time
+multiprocessing
+os
+socket
+threading
+_thread
