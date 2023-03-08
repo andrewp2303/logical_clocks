@@ -88,11 +88,9 @@ After experimenting with our scale models and analyzing the above graphs, we not
     \item Processes running with less ticks per second also struggled to manage the message queue size. This is illustrated well in the message queue graph for trial 1, where every process except the one running at 2 ticks / second had a queue length of 0 for the entirety of the simulation. This is logical because systems operating at a slower clock speed struggle to process inbound messages of peers running at comparatively higher clock speed that also send more messages.
 \end{itemize}
 
+\section{IV. Longer Scale Model Iterations}
 
-
-
-
-% \section{IV. Longer Scale Model Iterations}
+Per the assignment recommendation, we ran another iteration of our model for 2 minutes instead of 1 minute to verify the behavior of the logical clock and message queue size. 
 
 % \section{V. Modified Probabilities}
 
