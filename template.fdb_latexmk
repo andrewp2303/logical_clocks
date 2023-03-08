@@ -1,11 +1,11 @@
 # Fdb version 3
-["biber template"] 1677050884 "template.bcf" "template.bbl" "template" 1677093671
-  "template.bcf" 1677093671 105726 33fa751487717f0739913cf29091b51d "pdflatex"
+["biber template"] 1677050884 "template.bcf" "template.bbl" "template" 1678252016
+  "template.bcf" 1678252016 105726 33fa751487717f0739913cf29091b51d "pdflatex"
   (generated)
   "template.bbl"
   "template.blg"
-["pdflatex"] 1677093670 "/Users/ahiremath/Desktop/chat_protocol/template.tex" "template.pdf" "template" 1677093671
-  "/Users/ahiremath/Desktop/chat_protocol/template.tex" 1677093669 18973 2da7ad3d0d79f0c27466de3e097e4aec ""
+["pdflatex"] 1678252015 "/Users/ahiremath/Desktop/logical_clocks/template.tex" "template.pdf" "template" 1678252016
+  "/Users/ahiremath/Desktop/logical_clocks/template.tex" 1678252015 18973 e440d45f21dcdfe99b90a2f212018e6b ""
   "/usr/local/texlive/2022/texmf-dist/fonts/enc/dvips/base/8r.enc" 1165713224 4850 80dc9bab7f31fb78a000ccfed0e27cab ""
   "/usr/local/texlive/2022/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc" 1136849721 2971 def0b6c1f0b107b3b936def894055589 ""
   "/usr/local/texlive/2022/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
@@ -144,11 +144,11 @@
   "/usr/local/texlive/2022/texmf-var/web2c/pdftex/pdflatex.fmt" 1674702701 2826448 ffad6bfdc32fed068edf59b7ea9a9417 ""
   "/usr/local/texlive/2022/texmf.cnf" 1647878952 577 209b46be99c9075fd74d4c0369380e8c ""
   "LTJournalArticle.cls" 1676845854 10029 db526259f4b4bf0415f877a86af94f2d ""
-  "template.aux" 1677093671 1600 1c9d975d9738dde81372568ad89a3f0a "pdflatex"
+  "template.aux" 1678252016 1600 1c9d975d9738dde81372568ad89a3f0a "pdflatex"
   "template.bbl" 1677050885 466 ee04f40f768daeed26442158e95aba61 "biber template"
-  "template.out" 1677093671 1085 8507bcb6fd820e7eaad47d8bfe8b2882 "pdflatex"
-  "template.run.xml" 1677093671 2329 dd0b28ad5248dccc56c9d3651d0f9aad "pdflatex"
-  "template.tex" 1677093669 18973 2da7ad3d0d79f0c27466de3e097e4aec ""
+  "template.out" 1678252016 1085 8507bcb6fd820e7eaad47d8bfe8b2882 "pdflatex"
+  "template.run.xml" 1678252016 2329 dd0b28ad5248dccc56c9d3651d0f9aad "pdflatex"
+  "template.tex" 1678252015 18973 e440d45f21dcdfe99b90a2f212018e6b ""
   (generated)
   "template.aux"
   "template.bcf"
