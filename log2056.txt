@@ -1,0 +1,1111 @@
+Internal event! Global time: 2023-03-08T07:21:48Z
+Logical clock time: 1 
+
+Internal event! Global time: 2023-03-08T07:21:48Z
+Logical clock time: 2 
+
+Message sent to ports 3056 and 4056! Global time: 2023-03-08T07:21:48Z
+Logical clock time: 3 
+
+Message sent to ports 3056 and 4056! Global time: 2023-03-08T07:21:48Z
+Logical clock time: 4 
+
+Message sent to port 3056! Global time: 2023-03-08T07:21:49Z
+Logical clock time: 5 
+
+Internal event! Global time: 2023-03-08T07:21:49Z
+Logical clock time: 6 
+
+Internal event! Global time: 2023-03-08T07:21:49Z
+Logical clock time: 7 
+
+Message sent to port 4056! Global time: 2023-03-08T07:21:49Z
+Logical clock time: 8 
+
+Internal event! Global time: 2023-03-08T07:21:49Z
+Logical clock time: 9 
+
+Message sent to ports 3056 and 4056! Global time: 2023-03-08T07:21:50Z
+Logical clock time: 10 
+
+Internal event! Global time: 2023-03-08T07:21:50Z
+Logical clock time: 11 
+
+Internal event! Global time: 2023-03-08T07:21:50Z
+Logical clock time: 12 
+
+Internal event! Global time: 2023-03-08T07:21:50Z
+Logical clock time: 13 
+
+Message sent to port 3056! Global time: 2023-03-08T07:21:50Z
+Logical clock time: 14 
+
+Message sent to ports 3056 and 4056! Global time: 2023-03-08T07:21:50Z
+Logical clock time: 15 
+
+Message sent to port 4056! Global time: 2023-03-08T07:21:51Z
+Logical clock time: 16 
+
+Internal event! Global time: 2023-03-08T07:21:51Z
+Logical clock time: 17 
+
+Internal event! Global time: 2023-03-08T07:21:51Z
+Logical clock time: 18 
+
+Message sent to ports 3056 and 4056! Global time: 2023-03-08T07:21:51Z
+Logical clock time: 19 
+
+Message sent to port 4056! Global time: 2023-03-08T07:21:51Z
+Logical clock time: 20 
+
+Message sent to ports 3056 and 4056! Global time: 2023-03-08T07:21:51Z
+Logical clock time: 21 
+
+Internal event! Global time: 2023-03-08T07:21:52Z
+Logical clock time: 22 
+
+Message sent to ports 3056 and 4056! Global time: 2023-03-08T07:21:52Z
+Logical clock time: 23 
+
+Internal event! Global time: 2023-03-08T07:21:52Z
+Logical clock time: 24 
+
+Internal event! Global time: 2023-03-08T07:21:52Z
+Logical clock time: 25 
+
+Message sent to ports 3056 and 4056! Global time: 2023-03-08T07:21:52Z
+Logical clock time: 26 
+
+Message sent to port 4056! Global time: 2023-03-08T07:21:52Z
+Logical clock time: 27 
+
+Internal event! Global time: 2023-03-08T07:21:53Z
+Logical clock time: 28 
+
+Internal event! Global time: 2023-03-08T07:21:53Z
+Logical clock time: 29 
+
+Message sent to port 4056! Global time: 2023-03-08T07:21:53Z
+Logical clock time: 30 
+
+Internal event! Global time: 2023-03-08T07:21:53Z
+Logical clock time: 31 
+
+Message sent to ports 3056 and 4056! Global time: 2023-03-08T07:21:53Z
+Logical clock time: 32 
+
+Message sent to port 3056! Global time: 2023-03-08T07:21:53Z
+Logical clock time: 33 
+
+Internal event! Global time: 2023-03-08T07:21:54Z
+Logical clock time: 34 
+
+Internal event! Global time: 2023-03-08T07:21:54Z
+Logical clock time: 35 
+
+Message sent to port 4056! Global time: 2023-03-08T07:21:54Z
+Logical clock time: 36 
+
+Internal event! Global time: 2023-03-08T07:21:54Z
+Logical clock time: 37 
+
+Internal event! Global time: 2023-03-08T07:21:54Z
+Logical clock time: 38 
+
+Message sent to port 3056! Global time: 2023-03-08T07:21:54Z
+Logical clock time: 39 
+
+Internal event! Global time: 2023-03-08T07:21:55Z
+Logical clock time: 40 
+
+Internal event! Global time: 2023-03-08T07:21:55Z
+Logical clock time: 41 
+
+Internal event! Global time: 2023-03-08T07:21:55Z
+Logical clock time: 42 
+
+Internal event! Global time: 2023-03-08T07:21:55Z
+Logical clock time: 43 
+
+Internal event! Global time: 2023-03-08T07:21:55Z
+Logical clock time: 44 
+
+Internal event! Global time: 2023-03-08T07:21:55Z
+Logical clock time: 45 
+
+Message received! Global time: 2023-03-08T07:21:56Z
+Message queue length: 0
+Logical clock time: 46 
+
+Internal event! Global time: 2023-03-08T07:21:56Z
+Logical clock time: 47 
+
+Message sent to port 4056! Global time: 2023-03-08T07:21:56Z
+Logical clock time: 48 
+
+Message sent to ports 3056 and 4056! Global time: 2023-03-08T07:21:56Z
+Logical clock time: 49 
+
+Internal event! Global time: 2023-03-08T07:21:56Z
+Logical clock time: 50 
+
+Message sent to ports 3056 and 4056! Global time: 2023-03-08T07:21:57Z
+Logical clock time: 51 
+
+Internal event! Global time: 2023-03-08T07:21:57Z
+Logical clock time: 52 
+
+Internal event! Global time: 2023-03-08T07:21:57Z
+Logical clock time: 53 
+
+Internal event! Global time: 2023-03-08T07:21:57Z
+Logical clock time: 54 
+
+Message sent to port 3056! Global time: 2023-03-08T07:21:57Z
+Logical clock time: 55 
+
+Message sent to ports 3056 and 4056! Global time: 2023-03-08T07:21:57Z
+Logical clock time: 56 
+
+Internal event! Global time: 2023-03-08T07:21:58Z
+Logical clock time: 57 
+
+Internal event! Global time: 2023-03-08T07:21:58Z
+Logical clock time: 58 
+
+Internal event! Global time: 2023-03-08T07:21:58Z
+Logical clock time: 59 
+
+Internal event! Global time: 2023-03-08T07:21:58Z
+Logical clock time: 60 
+
+Internal event! Global time: 2023-03-08T07:21:58Z
+Logical clock time: 61 
+
+Internal event! Global time: 2023-03-08T07:21:58Z
+Logical clock time: 62 
+
+Message sent to port 3056! Global time: 2023-03-08T07:21:59Z
+Logical clock time: 63 
+
+Internal event! Global time: 2023-03-08T07:21:59Z
+Logical clock time: 64 
+
+Internal event! Global time: 2023-03-08T07:21:59Z
+Logical clock time: 65 
+
+Internal event! Global time: 2023-03-08T07:21:59Z
+Logical clock time: 66 
+
+Message received! Global time: 2023-03-08T07:21:59Z
+Message queue length: 0
+Logical clock time: 67 
+
+Internal event! Global time: 2023-03-08T07:21:59Z
+Logical clock time: 68 
+
+Internal event! Global time: 2023-03-08T07:22:00Z
+Logical clock time: 69 
+
+Internal event! Global time: 2023-03-08T07:22:00Z
+Logical clock time: 70 
+
+Internal event! Global time: 2023-03-08T07:22:00Z
+Logical clock time: 71 
+
+Message sent to ports 3056 and 4056! Global time: 2023-03-08T07:22:00Z
+Logical clock time: 72 
+
+Internal event! Global time: 2023-03-08T07:22:00Z
+Logical clock time: 73 
+
+Internal event! Global time: 2023-03-08T07:22:00Z
+Logical clock time: 74 
+
+Internal event! Global time: 2023-03-08T07:22:01Z
+Logical clock time: 75 
+
+Internal event! Global time: 2023-03-08T07:22:01Z
+Logical clock time: 76 
+
+Internal event! Global time: 2023-03-08T07:22:01Z
+Logical clock time: 77 
+
+Message received! Global time: 2023-03-08T07:22:01Z
+Message queue length: 0
+Logical clock time: 78 
+
+Internal event! Global time: 2023-03-08T07:22:01Z
+Logical clock time: 79 
+
+Internal event! Global time: 2023-03-08T07:22:01Z
+Logical clock time: 80 
+
+Internal event! Global time: 2023-03-08T07:22:02Z
+Logical clock time: 81 
+
+Internal event! Global time: 2023-03-08T07:22:02Z
+Logical clock time: 82 
+
+Internal event! Global time: 2023-03-08T07:22:02Z
+Logical clock time: 83 
+
+Message received! Global time: 2023-03-08T07:22:02Z
+Message queue length: 0
+Logical clock time: 84 
+
+Message sent to ports 3056 and 4056! Global time: 2023-03-08T07:22:02Z
+Logical clock time: 85 
+
+Internal event! Global time: 2023-03-08T07:22:02Z
+Logical clock time: 86 
+
+Internal event! Global time: 2023-03-08T07:22:03Z
+Logical clock time: 87 
+
+Internal event! Global time: 2023-03-08T07:22:03Z
+Logical clock time: 88 
+
+Message sent to port 3056! Global time: 2023-03-08T07:22:03Z
+Logical clock time: 89 
+
+Internal event! Global time: 2023-03-08T07:22:03Z
+Logical clock time: 90 
+
+Message sent to port 3056! Global time: 2023-03-08T07:22:03Z
+Logical clock time: 91 
+
+Internal event! Global time: 2023-03-08T07:22:03Z
+Logical clock time: 92 
+
+Message sent to port 3056! Global time: 2023-03-08T07:22:04Z
+Logical clock time: 93 
+
+Message sent to ports 3056 and 4056! Global time: 2023-03-08T07:22:04Z
+Logical clock time: 94 
+
+Internal event! Global time: 2023-03-08T07:22:04Z
+Logical clock time: 95 
+
+Internal event! Global time: 2023-03-08T07:22:04Z
+Logical clock time: 96 
+
+Internal event! Global time: 2023-03-08T07:22:04Z
+Logical clock time: 97 
+
+Message sent to ports 3056 and 4056! Global time: 2023-03-08T07:22:05Z
+Logical clock time: 98 
+
+Message sent to port 3056! Global time: 2023-03-08T07:22:05Z
+Logical clock time: 99 
+
+Internal event! Global time: 2023-03-08T07:22:05Z
+Logical clock time: 100 
+
+Message sent to ports 3056 and 4056! Global time: 2023-03-08T07:22:05Z
+Logical clock time: 101 
+
+Internal event! Global time: 2023-03-08T07:22:05Z
+Logical clock time: 102 
+
+Internal event! Global time: 2023-03-08T07:22:05Z
+Logical clock time: 103 
+
+Message sent to port 4056! Global time: 2023-03-08T07:22:06Z
+Logical clock time: 104 
+
+Message sent to port 4056! Global time: 2023-03-08T07:22:06Z
+Logical clock time: 105 
+
+Internal event! Global time: 2023-03-08T07:22:06Z
+Logical clock time: 106 
+
+Message sent to port 3056! Global time: 2023-03-08T07:22:06Z
+Logical clock time: 107 
+
+Internal event! Global time: 2023-03-08T07:22:06Z
+Logical clock time: 108 
+
+Internal event! Global time: 2023-03-08T07:22:06Z
+Logical clock time: 109 
+
+Internal event! Global time: 2023-03-08T07:22:07Z
+Logical clock time: 110 
+
+Message sent to ports 3056 and 4056! Global time: 2023-03-08T07:22:07Z
+Logical clock time: 111 
+
+Internal event! Global time: 2023-03-08T07:22:07Z
+Logical clock time: 112 
+
+Internal event! Global time: 2023-03-08T07:22:07Z
+Logical clock time: 113 
+
+Message sent to ports 3056 and 4056! Global time: 2023-03-08T07:22:07Z
+Logical clock time: 114 
+
+Internal event! Global time: 2023-03-08T07:22:07Z
+Logical clock time: 115 
+
+Internal event! Global time: 2023-03-08T07:22:08Z
+Logical clock time: 116 
+
+Internal event! Global time: 2023-03-08T07:22:08Z
+Logical clock time: 117 
+
+Message sent to port 3056! Global time: 2023-03-08T07:22:08Z
+Logical clock time: 118 
+
+Message sent to port 4056! Global time: 2023-03-08T07:22:08Z
+Logical clock time: 119 
+
+Message sent to port 4056! Global time: 2023-03-08T07:22:08Z
+Logical clock time: 120 
+
+Internal event! Global time: 2023-03-08T07:22:08Z
+Logical clock time: 121 
+
+Internal event! Global time: 2023-03-08T07:22:09Z
+Logical clock time: 122 
+
+Message sent to port 4056! Global time: 2023-03-08T07:22:09Z
+Logical clock time: 123 
+
+Message sent to ports 3056 and 4056! Global time: 2023-03-08T07:22:09Z
+Logical clock time: 124 
+
+Message sent to port 4056! Global time: 2023-03-08T07:22:09Z
+Logical clock time: 125 
+
+Internal event! Global time: 2023-03-08T07:22:09Z
+Logical clock time: 126 
+
+Message sent to ports 3056 and 4056! Global time: 2023-03-08T07:22:09Z
+Logical clock time: 127 
+
+Message sent to port 4056! Global time: 2023-03-08T07:22:10Z
+Logical clock time: 128 
+
+Internal event! Global time: 2023-03-08T07:22:10Z
+Logical clock time: 129 
+
+Message sent to port 4056! Global time: 2023-03-08T07:22:10Z
+Logical clock time: 130 
+
+Internal event! Global time: 2023-03-08T07:22:10Z
+Logical clock time: 131 
+
+Internal event! Global time: 2023-03-08T07:22:10Z
+Logical clock time: 132 
+
+Message sent to port 3056! Global time: 2023-03-08T07:22:10Z
+Logical clock time: 133 
+
+Internal event! Global time: 2023-03-08T07:22:11Z
+Logical clock time: 134 
+
+Internal event! Global time: 2023-03-08T07:22:11Z
+Logical clock time: 135 
+
+Message sent to port 4056! Global time: 2023-03-08T07:22:11Z
+Logical clock time: 136 
+
+Internal event! Global time: 2023-03-08T07:22:11Z
+Logical clock time: 137 
+
+Internal event! Global time: 2023-03-08T07:22:11Z
+Logical clock time: 138 
+
+Internal event! Global time: 2023-03-08T07:22:12Z
+Logical clock time: 139 
+
+Message received! Global time: 2023-03-08T07:22:12Z
+Message queue length: 0
+Logical clock time: 140 
+
+Internal event! Global time: 2023-03-08T07:22:12Z
+Logical clock time: 141 
+
+Internal event! Global time: 2023-03-08T07:22:12Z
+Logical clock time: 142 
+
+Message sent to port 3056! Global time: 2023-03-08T07:22:12Z
+Logical clock time: 143 
+
+Internal event! Global time: 2023-03-08T07:22:12Z
+Logical clock time: 144 
+
+Message sent to port 3056! Global time: 2023-03-08T07:22:13Z
+Logical clock time: 145 
+
+Internal event! Global time: 2023-03-08T07:22:13Z
+Logical clock time: 146 
+
+Internal event! Global time: 2023-03-08T07:22:13Z
+Logical clock time: 147 
+
+Internal event! Global time: 2023-03-08T07:22:13Z
+Logical clock time: 148 
+
+Internal event! Global time: 2023-03-08T07:22:13Z
+Logical clock time: 149 
+
+Internal event! Global time: 2023-03-08T07:22:13Z
+Logical clock time: 150 
+
+Internal event! Global time: 2023-03-08T07:22:14Z
+Logical clock time: 151 
+
+Internal event! Global time: 2023-03-08T07:22:14Z
+Logical clock time: 152 
+
+Message sent to port 3056! Global time: 2023-03-08T07:22:14Z
+Logical clock time: 153 
+
+Message sent to ports 3056 and 4056! Global time: 2023-03-08T07:22:14Z
+Logical clock time: 154 
+
+Internal event! Global time: 2023-03-08T07:22:14Z
+Logical clock time: 155 
+
+Message sent to ports 3056 and 4056! Global time: 2023-03-08T07:22:14Z
+Logical clock time: 156 
+
+Internal event! Global time: 2023-03-08T07:22:15Z
+Logical clock time: 157 
+
+Internal event! Global time: 2023-03-08T07:22:15Z
+Logical clock time: 158 
+
+Message sent to port 3056! Global time: 2023-03-08T07:22:15Z
+Logical clock time: 159 
+
+Message sent to port 3056! Global time: 2023-03-08T07:22:15Z
+Logical clock time: 160 
+
+Message sent to port 4056! Global time: 2023-03-08T07:22:15Z
+Logical clock time: 161 
+
+Message sent to port 3056! Global time: 2023-03-08T07:22:15Z
+Logical clock time: 162 
+
+Message sent to port 3056! Global time: 2023-03-08T07:22:16Z
+Logical clock time: 163 
+
+Internal event! Global time: 2023-03-08T07:22:16Z
+Logical clock time: 164 
+
+Internal event! Global time: 2023-03-08T07:22:16Z
+Logical clock time: 165 
+
+Message sent to port 3056! Global time: 2023-03-08T07:22:16Z
+Logical clock time: 166 
+
+Message sent to ports 3056 and 4056! Global time: 2023-03-08T07:22:16Z
+Logical clock time: 167 
+
+Internal event! Global time: 2023-03-08T07:22:16Z
+Logical clock time: 168 
+
+Message sent to port 4056! Global time: 2023-03-08T07:22:17Z
+Logical clock time: 169 
+
+Message sent to port 3056! Global time: 2023-03-08T07:22:17Z
+Logical clock time: 170 
+
+Internal event! Global time: 2023-03-08T07:22:17Z
+Logical clock time: 171 
+
+Internal event! Global time: 2023-03-08T07:22:17Z
+Logical clock time: 172 
+
+Internal event! Global time: 2023-03-08T07:22:17Z
+Logical clock time: 173 
+
+Internal event! Global time: 2023-03-08T07:22:17Z
+Logical clock time: 174 
+
+Message sent to ports 3056 and 4056! Global time: 2023-03-08T07:22:18Z
+Logical clock time: 175 
+
+Internal event! Global time: 2023-03-08T07:22:18Z
+Logical clock time: 176 
+
+Message sent to port 3056! Global time: 2023-03-08T07:22:18Z
+Logical clock time: 177 
+
+Internal event! Global time: 2023-03-08T07:22:18Z
+Logical clock time: 178 
+
+Internal event! Global time: 2023-03-08T07:22:18Z
+Logical clock time: 179 
+
+Internal event! Global time: 2023-03-08T07:22:19Z
+Logical clock time: 180 
+
+Internal event! Global time: 2023-03-08T07:22:19Z
+Logical clock time: 181 
+
+Internal event! Global time: 2023-03-08T07:22:19Z
+Logical clock time: 182 
+
+Internal event! Global time: 2023-03-08T07:22:19Z
+Logical clock time: 183 
+
+Internal event! Global time: 2023-03-08T07:22:19Z
+Logical clock time: 184 
+
+Internal event! Global time: 2023-03-08T07:22:19Z
+Logical clock time: 185 
+
+Internal event! Global time: 2023-03-08T07:22:20Z
+Logical clock time: 186 
+
+Internal event! Global time: 2023-03-08T07:22:20Z
+Logical clock time: 187 
+
+Internal event! Global time: 2023-03-08T07:22:20Z
+Logical clock time: 188 
+
+Internal event! Global time: 2023-03-08T07:22:20Z
+Logical clock time: 189 
+
+Message sent to port 4056! Global time: 2023-03-08T07:22:20Z
+Logical clock time: 190 
+
+Internal event! Global time: 2023-03-08T07:22:20Z
+Logical clock time: 191 
+
+Internal event! Global time: 2023-03-08T07:22:21Z
+Logical clock time: 192 
+
+Internal event! Global time: 2023-03-08T07:22:21Z
+Logical clock time: 193 
+
+Internal event! Global time: 2023-03-08T07:22:21Z
+Logical clock time: 194 
+
+Internal event! Global time: 2023-03-08T07:22:21Z
+Logical clock time: 195 
+
+Internal event! Global time: 2023-03-08T07:22:21Z
+Logical clock time: 196 
+
+Message sent to ports 3056 and 4056! Global time: 2023-03-08T07:22:21Z
+Logical clock time: 197 
+
+Internal event! Global time: 2023-03-08T07:22:22Z
+Logical clock time: 198 
+
+Internal event! Global time: 2023-03-08T07:22:22Z
+Logical clock time: 199 
+
+Internal event! Global time: 2023-03-08T07:22:22Z
+Logical clock time: 200 
+
+Message sent to ports 3056 and 4056! Global time: 2023-03-08T07:22:22Z
+Logical clock time: 201 
+
+Internal event! Global time: 2023-03-08T07:22:22Z
+Logical clock time: 202 
+
+Internal event! Global time: 2023-03-08T07:22:22Z
+Logical clock time: 203 
+
+Internal event! Global time: 2023-03-08T07:22:23Z
+Logical clock time: 204 
+
+Message sent to port 3056! Global time: 2023-03-08T07:22:23Z
+Logical clock time: 205 
+
+Internal event! Global time: 2023-03-08T07:22:23Z
+Logical clock time: 206 
+
+Message sent to ports 3056 and 4056! Global time: 2023-03-08T07:22:23Z
+Logical clock time: 207 
+
+Internal event! Global time: 2023-03-08T07:22:23Z
+Logical clock time: 208 
+
+Internal event! Global time: 2023-03-08T07:22:23Z
+Logical clock time: 209 
+
+Internal event! Global time: 2023-03-08T07:22:24Z
+Logical clock time: 210 
+
+Internal event! Global time: 2023-03-08T07:22:24Z
+Logical clock time: 211 
+
+Internal event! Global time: 2023-03-08T07:22:24Z
+Logical clock time: 212 
+
+Internal event! Global time: 2023-03-08T07:22:24Z
+Logical clock time: 213 
+
+Message received! Global time: 2023-03-08T07:22:24Z
+Message queue length: 0
+Logical clock time: 214 
+
+Message sent to port 4056! Global time: 2023-03-08T07:22:24Z
+Logical clock time: 215 
+
+Internal event! Global time: 2023-03-08T07:22:25Z
+Logical clock time: 216 
+
+Internal event! Global time: 2023-03-08T07:22:25Z
+Logical clock time: 217 
+
+Message sent to port 3056! Global time: 2023-03-08T07:22:25Z
+Logical clock time: 218 
+
+Internal event! Global time: 2023-03-08T07:22:25Z
+Logical clock time: 219 
+
+Internal event! Global time: 2023-03-08T07:22:25Z
+Logical clock time: 220 
+
+Message sent to port 3056! Global time: 2023-03-08T07:22:25Z
+Logical clock time: 221 
+
+Internal event! Global time: 2023-03-08T07:22:26Z
+Logical clock time: 222 
+
+Message received! Global time: 2023-03-08T07:22:26Z
+Message queue length: 0
+Logical clock time: 223 
+
+Internal event! Global time: 2023-03-08T07:22:26Z
+Logical clock time: 224 
+
+Message sent to ports 3056 and 4056! Global time: 2023-03-08T07:22:26Z
+Logical clock time: 225 
+
+Internal event! Global time: 2023-03-08T07:22:26Z
+Logical clock time: 226 
+
+Internal event! Global time: 2023-03-08T07:22:27Z
+Logical clock time: 227 
+
+Internal event! Global time: 2023-03-08T07:22:27Z
+Logical clock time: 228 
+
+Internal event! Global time: 2023-03-08T07:22:27Z
+Logical clock time: 229 
+
+Internal event! Global time: 2023-03-08T07:22:27Z
+Logical clock time: 230 
+
+Internal event! Global time: 2023-03-08T07:22:27Z
+Logical clock time: 231 
+
+Internal event! Global time: 2023-03-08T07:22:27Z
+Logical clock time: 232 
+
+Internal event! Global time: 2023-03-08T07:22:28Z
+Logical clock time: 233 
+
+Message sent to port 3056! Global time: 2023-03-08T07:22:28Z
+Logical clock time: 234 
+
+Message sent to port 3056! Global time: 2023-03-08T07:22:28Z
+Logical clock time: 235 
+
+Message sent to port 3056! Global time: 2023-03-08T07:22:28Z
+Logical clock time: 236 
+
+Internal event! Global time: 2023-03-08T07:22:28Z
+Logical clock time: 237 
+
+Internal event! Global time: 2023-03-08T07:22:28Z
+Logical clock time: 238 
+
+Message sent to port 4056! Global time: 2023-03-08T07:22:29Z
+Logical clock time: 239 
+
+Message sent to port 3056! Global time: 2023-03-08T07:22:29Z
+Logical clock time: 240 
+
+Internal event! Global time: 2023-03-08T07:22:29Z
+Logical clock time: 241 
+
+Internal event! Global time: 2023-03-08T07:22:29Z
+Logical clock time: 242 
+
+Internal event! Global time: 2023-03-08T07:22:29Z
+Logical clock time: 243 
+
+Internal event! Global time: 2023-03-08T07:22:29Z
+Logical clock time: 244 
+
+Internal event! Global time: 2023-03-08T07:22:30Z
+Logical clock time: 245 
+
+Internal event! Global time: 2023-03-08T07:22:30Z
+Logical clock time: 246 
+
+Internal event! Global time: 2023-03-08T07:22:30Z
+Logical clock time: 247 
+
+Message sent to port 4056! Global time: 2023-03-08T07:22:30Z
+Logical clock time: 248 
+
+Internal event! Global time: 2023-03-08T07:22:30Z
+Logical clock time: 249 
+
+Message sent to port 3056! Global time: 2023-03-08T07:22:30Z
+Logical clock time: 250 
+
+Internal event! Global time: 2023-03-08T07:22:31Z
+Logical clock time: 251 
+
+Message sent to ports 3056 and 4056! Global time: 2023-03-08T07:22:31Z
+Logical clock time: 252 
+
+Internal event! Global time: 2023-03-08T07:22:31Z
+Logical clock time: 253 
+
+Internal event! Global time: 2023-03-08T07:22:31Z
+Logical clock time: 254 
+
+Internal event! Global time: 2023-03-08T07:22:31Z
+Logical clock time: 255 
+
+Internal event! Global time: 2023-03-08T07:22:31Z
+Logical clock time: 256 
+
+Internal event! Global time: 2023-03-08T07:22:32Z
+Logical clock time: 257 
+
+Message sent to port 3056! Global time: 2023-03-08T07:22:32Z
+Logical clock time: 258 
+
+Message received! Global time: 2023-03-08T07:22:32Z
+Message queue length: 0
+Logical clock time: 259 
+
+Message sent to port 3056! Global time: 2023-03-08T07:22:32Z
+Logical clock time: 260 
+
+Message sent to ports 3056 and 4056! Global time: 2023-03-08T07:22:32Z
+Logical clock time: 261 
+
+Internal event! Global time: 2023-03-08T07:22:32Z
+Logical clock time: 262 
+
+Internal event! Global time: 2023-03-08T07:22:33Z
+Logical clock time: 263 
+
+Message sent to port 3056! Global time: 2023-03-08T07:22:33Z
+Logical clock time: 264 
+
+Internal event! Global time: 2023-03-08T07:22:33Z
+Logical clock time: 265 
+
+Internal event! Global time: 2023-03-08T07:22:33Z
+Logical clock time: 266 
+
+Message sent to port 4056! Global time: 2023-03-08T07:22:33Z
+Logical clock time: 267 
+
+Message sent to port 3056! Global time: 2023-03-08T07:22:34Z
+Logical clock time: 268 
+
+Internal event! Global time: 2023-03-08T07:22:34Z
+Logical clock time: 269 
+
+Internal event! Global time: 2023-03-08T07:22:34Z
+Logical clock time: 270 
+
+Internal event! Global time: 2023-03-08T07:22:34Z
+Logical clock time: 271 
+
+Message sent to ports 3056 and 4056! Global time: 2023-03-08T07:22:34Z
+Logical clock time: 272 
+
+Internal event! Global time: 2023-03-08T07:22:34Z
+Logical clock time: 273 
+
+Message sent to ports 3056 and 4056! Global time: 2023-03-08T07:22:35Z
+Logical clock time: 274 
+
+Internal event! Global time: 2023-03-08T07:22:35Z
+Logical clock time: 275 
+
+Internal event! Global time: 2023-03-08T07:22:35Z
+Logical clock time: 276 
+
+Internal event! Global time: 2023-03-08T07:22:35Z
+Logical clock time: 277 
+
+Message sent to port 3056! Global time: 2023-03-08T07:22:35Z
+Logical clock time: 278 
+
+Internal event! Global time: 2023-03-08T07:22:35Z
+Logical clock time: 279 
+
+Message sent to port 4056! Global time: 2023-03-08T07:22:36Z
+Logical clock time: 280 
+
+Internal event! Global time: 2023-03-08T07:22:36Z
+Logical clock time: 281 
+
+Internal event! Global time: 2023-03-08T07:22:36Z
+Logical clock time: 282 
+
+Internal event! Global time: 2023-03-08T07:22:36Z
+Logical clock time: 283 
+
+Internal event! Global time: 2023-03-08T07:22:36Z
+Logical clock time: 284 
+
+Message received! Global time: 2023-03-08T07:22:36Z
+Message queue length: 0
+Logical clock time: 285 
+
+Internal event! Global time: 2023-03-08T07:22:37Z
+Logical clock time: 286 
+
+Internal event! Global time: 2023-03-08T07:22:37Z
+Logical clock time: 287 
+
+Message received! Global time: 2023-03-08T07:22:37Z
+Message queue length: 0
+Logical clock time: 288 
+
+Message sent to ports 3056 and 4056! Global time: 2023-03-08T07:22:37Z
+Logical clock time: 289 
+
+Internal event! Global time: 2023-03-08T07:22:37Z
+Logical clock time: 290 
+
+Internal event! Global time: 2023-03-08T07:22:37Z
+Logical clock time: 291 
+
+Internal event! Global time: 2023-03-08T07:22:38Z
+Logical clock time: 292 
+
+Message sent to port 3056! Global time: 2023-03-08T07:22:38Z
+Logical clock time: 293 
+
+Message sent to port 3056! Global time: 2023-03-08T07:22:38Z
+Logical clock time: 294 
+
+Internal event! Global time: 2023-03-08T07:22:38Z
+Logical clock time: 295 
+
+Message sent to ports 3056 and 4056! Global time: 2023-03-08T07:22:38Z
+Logical clock time: 296 
+
+Internal event! Global time: 2023-03-08T07:22:38Z
+Logical clock time: 297 
+
+Internal event! Global time: 2023-03-08T07:22:39Z
+Logical clock time: 298 
+
+Internal event! Global time: 2023-03-08T07:22:39Z
+Logical clock time: 299 
+
+Message received! Global time: 2023-03-08T07:22:39Z
+Message queue length: 0
+Logical clock time: 300 
+
+Internal event! Global time: 2023-03-08T07:22:39Z
+Logical clock time: 301 
+
+Internal event! Global time: 2023-03-08T07:22:39Z
+Logical clock time: 302 
+
+Message received! Global time: 2023-03-08T07:22:39Z
+Message queue length: 0
+Logical clock time: 303 
+
+Internal event! Global time: 2023-03-08T07:22:40Z
+Logical clock time: 304 
+
+Internal event! Global time: 2023-03-08T07:22:40Z
+Logical clock time: 305 
+
+Internal event! Global time: 2023-03-08T07:22:40Z
+Logical clock time: 306 
+
+Message sent to port 3056! Global time: 2023-03-08T07:22:40Z
+Logical clock time: 307 
+
+Internal event! Global time: 2023-03-08T07:22:40Z
+Logical clock time: 308 
+
+Internal event! Global time: 2023-03-08T07:22:41Z
+Logical clock time: 309 
+
+Message sent to port 3056! Global time: 2023-03-08T07:22:41Z
+Logical clock time: 310 
+
+Message sent to ports 3056 and 4056! Global time: 2023-03-08T07:22:41Z
+Logical clock time: 311 
+
+Internal event! Global time: 2023-03-08T07:22:41Z
+Logical clock time: 312 
+
+Internal event! Global time: 2023-03-08T07:22:41Z
+Logical clock time: 313 
+
+Message sent to ports 3056 and 4056! Global time: 2023-03-08T07:22:41Z
+Logical clock time: 314 
+
+Message sent to ports 3056 and 4056! Global time: 2023-03-08T07:22:42Z
+Logical clock time: 315 
+
+Internal event! Global time: 2023-03-08T07:22:42Z
+Logical clock time: 316 
+
+Message sent to port 3056! Global time: 2023-03-08T07:22:42Z
+Logical clock time: 317 
+
+Internal event! Global time: 2023-03-08T07:22:42Z
+Logical clock time: 318 
+
+Internal event! Global time: 2023-03-08T07:22:42Z
+Logical clock time: 319 
+
+Message sent to port 4056! Global time: 2023-03-08T07:22:42Z
+Logical clock time: 320 
+
+Message sent to ports 3056 and 4056! Global time: 2023-03-08T07:22:43Z
+Logical clock time: 321 
+
+Message sent to ports 3056 and 4056! Global time: 2023-03-08T07:22:43Z
+Logical clock time: 322 
+
+Internal event! Global time: 2023-03-08T07:22:43Z
+Logical clock time: 323 
+
+Internal event! Global time: 2023-03-08T07:22:43Z
+Logical clock time: 324 
+
+Message sent to ports 3056 and 4056! Global time: 2023-03-08T07:22:43Z
+Logical clock time: 325 
+
+Internal event! Global time: 2023-03-08T07:22:43Z
+Logical clock time: 326 
+
+Internal event! Global time: 2023-03-08T07:22:44Z
+Logical clock time: 327 
+
+Message sent to ports 3056 and 4056! Global time: 2023-03-08T07:22:44Z
+Logical clock time: 328 
+
+Message sent to port 4056! Global time: 2023-03-08T07:22:44Z
+Logical clock time: 329 
+
+Internal event! Global time: 2023-03-08T07:22:44Z
+Logical clock time: 330 
+
+Internal event! Global time: 2023-03-08T07:22:44Z
+Logical clock time: 331 
+
+Message sent to port 4056! Global time: 2023-03-08T07:22:44Z
+Logical clock time: 332 
+
+Internal event! Global time: 2023-03-08T07:22:45Z
+Logical clock time: 333 
+
+Internal event! Global time: 2023-03-08T07:22:45Z
+Logical clock time: 334 
+
+Internal event! Global time: 2023-03-08T07:22:45Z
+Logical clock time: 335 
+
+Internal event! Global time: 2023-03-08T07:22:45Z
+Logical clock time: 336 
+
+Message sent to port 3056! Global time: 2023-03-08T07:22:45Z
+Logical clock time: 337 
+
+Message sent to port 4056! Global time: 2023-03-08T07:22:45Z
+Logical clock time: 338 
+
+Internal event! Global time: 2023-03-08T07:22:46Z
+Logical clock time: 339 
+
+Message sent to port 4056! Global time: 2023-03-08T07:22:46Z
+Logical clock time: 340 
+
+Internal event! Global time: 2023-03-08T07:22:46Z
+Logical clock time: 341 
+
+Message sent to port 4056! Global time: 2023-03-08T07:22:46Z
+Logical clock time: 342 
+
+Internal event! Global time: 2023-03-08T07:22:46Z
+Logical clock time: 343 
+
+Internal event! Global time: 2023-03-08T07:22:46Z
+Logical clock time: 344 
+
+Internal event! Global time: 2023-03-08T07:22:47Z
+Logical clock time: 345 
+
+Internal event! Global time: 2023-03-08T07:22:47Z
+Logical clock time: 346 
+
+Internal event! Global time: 2023-03-08T07:22:47Z
+Logical clock time: 347 
+
+Internal event! Global time: 2023-03-08T07:22:47Z
+Logical clock time: 348 
+
+Internal event! Global time: 2023-03-08T07:22:47Z
+Logical clock time: 349 
+
+Message received! Global time: 2023-03-08T07:22:48Z
+Message queue length: 0
+Logical clock time: 350 
+
+Internal event! Global time: 2023-03-08T07:22:48Z
+Logical clock time: 351 
+
+Internal event! Global time: 2023-03-08T07:22:48Z
+Logical clock time: 352 
+
+Internal event! Global time: 2023-03-08T07:22:48Z
+Logical clock time: 353 
+
+Internal event! Global time: 2023-03-08T07:22:48Z
+Logical clock time: 354 
+
+Message sent to ports 3056 and 4056! Global time: 2023-03-08T07:22:48Z
+Logical clock time: 355 
+
+Message sent to ports 3056 and 4056! Global time: 2023-03-08T07:22:49Z
+Logical clock time: 356 
+
+Internal event! Global time: 2023-03-08T07:22:49Z
+Logical clock time: 357 
+
+Message sent to port 4056! Global time: 2023-03-08T07:22:49Z
+Logical clock time: 358 
+
+Internal event! Global time: 2023-03-08T07:22:49Z
+Logical clock time: 359 
+
+Internal event! Global time: 2023-03-08T07:22:49Z
+Logical clock time: 360 
+
+Internal event! Global time: 2023-03-08T07:22:49Z
+Logical clock time: 361 
+
+Internal event! Global time: 2023-03-08T07:22:50Z
+Logical clock time: 362 
+
+Internal event! Global time: 2023-03-08T07:22:50Z
+Logical clock time: 363 
+
+Internal event! Global time: 2023-03-08T07:22:50Z
+Logical clock time: 364 
+
+Internal event! Global time: 2023-03-08T07:22:50Z
+Logical clock time: 365 
+
+Message sent to port 4056! Global time: 2023-03-08T07:22:50Z
+Logical clock time: 366 
+

@@ -2,8 +2,6 @@ from multiprocessing import Process
 import os, socket, time, random, re
 from _thread import *
 from threading import Thread
-import matplotlib.pyplot as plt
-
 
 def consumer(conn):
 	'''Listens for incoming messages and adds them to the messages queue.'''
