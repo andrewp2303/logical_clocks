@@ -19,8 +19,8 @@ def consumer(conn):
 		if dataVal != "":
 
 			# Test that incoming messages are possible logical clock values.
+			assert(dataVal.isnumeric())
 			assert(int(dataVal) >= 0)
-
 			messages.append(dataVal)
  
 
@@ -73,7 +73,7 @@ def machine(config, allPorts):
 			print("Client-side connection success to port val:" + str(port) + "\n")
 
 		except socket.error as e:
-			print ("Error connecting producer: %s" % e)
+			print("Error connecting producer: %s" % e)
 
 	# Test that a socket connection has been formed with all other machines.
 	assert(len(sockets) == len(ports))
@@ -97,7 +97,7 @@ def machine(config, allPorts):
 				with open (f"output{PORT}_seconds.txt", "w") as z:
 					while True:
 						# Generate a random code 1-10.
-						code = random.randint(1, 10)
+						code = random.randint(1, 15)
 
 						# Pop a message from the queue if there are messages.
 						if len(messages) > 0:
@@ -157,13 +157,18 @@ def machine(config, allPorts):
 def assertConfig(config):
 	'''Check that an input config is valid.'''
 
-	# Validate host address using https://www.geeksforgeeks.org/python-program-to-validate-an-ip-address/.
-	ipRegex = "^((25[0-5]|2[0-4][0-9]|1[0-9][0-9]|[1-9]?[0-9])\.){3}(25[0-5]|2[0-4][0-9]|1[0-9][0-9]|[1-9]?[0-9])$"
+	# Validate host address using a regex.
+	# https://www.geeksforgeeks.org/python-program-to-validate-an-ip-address/.
+	ipRegex = "^((25[0-5]|2[0-4][0-9]|1[0-9][0-9]|[1-9]?[0-9])\.){3}"
+	ipRegex += "(25[0-5]|2[0-4][0-9]|1[0-9][0-9]|[1-9]?[0-9])$"
+	assert(type(config[0]) == str)
 	assert(re.match(ipRegex, config[0]))
 
 	# Check that port is in valid range, and that tick size is at least 1.
-	assert(int(config[1]) >= 0 and int(config[1]) <= 65535)
-	assert(int(config[2]) >= 1)
+	assert(type(config[1]) == int)
+	assert(config[1] >= 0 and config[1] <= 65535)
+	assert(type(config[1]) == int)
+	assert(config[2] >= 1)
 
 
 if __name__ == '__main__':
