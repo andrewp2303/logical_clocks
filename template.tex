@@ -86,15 +86,84 @@ After experimenting with our scale models and analyzing the above graphs, we not
 \begin{itemize}
     \item Processes runnning with less ticks per second had much larger jumps in logical clock time. This is best illustrated on the graph for trial 3 where process 1 ran at 1 tick / second, process 2 ran at 3 ticks / second, and process 3 ran at 2 ticks / second. The line for process 1 is the most jagged, demonstrating larger deviations  from the line of best fit. The line for process 3 is the second most jagged, with the line for process 2 following after. The jaggedness in these lines exponentially reduces, demonstrating that faster tick speeds also reduce variations in logical clock time. 
     \item Processes running with less ticks per second also struggled to manage the message queue size. This is illustrated well in the message queue graph for trial 1, where every process except the one running at 2 ticks / second had a queue length of 0 for the entirety of the simulation. This is logical because systems operating at a slower clock speed struggle to process inbound messages of peers running at comparatively higher clock speed that also send more messages.
+    \item The behavior for the logical clock and message queue size radically changes when two processes are running at a much higher speed than the other process. In Trial 5, for example, two processes are running at 5 ticks / second while the remaining process is running at 1 tick / second. For the slowest process, the message queue continues to fill up and accumulate because the process can deal with only one message at a time. Even though the ending logical clock number for the slowest process is much less than the ending logical clock number for the faster processes, causality still exists but the slowest process can't process the messages fast enough.
 \end{itemize}
 
 \section{IV. Longer Scale Model Iterations}
 
-Per the assignment recommendation, we ran another iteration of our model for 2 minutes instead of 1 minute to verify the behavior of the logical clock and message queue size. 
+Per the assignment recommendation, we ran another iteration of our model for 2 minutes instead of 1 minute to verify the behavior of the logical clock and message queue size. We generated the following graphs for our longer iteration: 
 
-% \section{V. Modified Probabilities}
+\includegraphics[width=7.8cm]{assets/t6_clock.png}
+\includegraphics[width=7.8cm]{assets/t6_size.png}
 
-% \section{VI. Unit Testing}
+In the above graphs, we observe the inverse of the case in trial 5: there are two extremely slow processes and one extremely fast process. The graph behavior is consistent with our expected behavior since the jaggedness of the logical clock graph varies identically to the 1 minute case (a smaller clock cycle results in a higher variance of jumps in logical clock times). Additionally, we observe the expected behavior in the message queue graph with the two processes running at 1 tick / second spiking. The message queue size for the 2 minute case also appears to a linear factor away from the message queue in the 1 minute case for a comparable set of process ticks / second.
+
+\section{V. Modified Probabilities}
+
+In our final set of experiments, we modified the probabilities of our simulated machines sending messages. In trial 7 and 8, we used a (1, 5) range instead of a (1,10) range when determining whether to send a message, resulting in a higher hit rate. In trial 9, we used a (1,15) range when determinining whether to send a message, resulting in a lower hit rate. 
+
+We generated the following graphs: 
+
+\includegraphics[width=7.8cm]{assets/t7_clock.png}
+\includegraphics[width=7.8cm]{assets/t7_size.png}
+\includegraphics[width=7.8cm]{assets/t8_clock.png}
+\includegraphics[width=7.8cm]{assets/t8_size.png}
+\includegraphics[width=7.8cm]{assets/t9_clock.png}
+\includegraphics[width=7.8cm]{assets/t9_size.png}
+
+From these graphs, we noticed the following important trends: 
+\begin{itemize}
+    \item When there is a higher hit rate, the message queue loads up at a faster rate than observed in trials 1-5. An example that illustrates this is trial 7. Here, there are two extremely fast processes with clock rates of 6 ticks / second and one extremely slow process with a clock rate of 1 tick / second. The lag from the slow process is incredibly large, with the process reaching less than half the logical clock time as the 6 ticks / second processes over the same time interval. Like in trial 5, causality is preserved, but the slow process is spammed to the point where it is still handling old message requests.
+    \item The message queue varies more when the differences in the clock rate are more extreme. However, the message queue variations aren't as pronounced when the differences in the clock rate aren't extreme. 
+    \item The logical clock of the slowest process is able to keep up with substantially faster processes when the hit rate is lower. This is shown in trial 9 where the two fast processes run at 5 ticks / second and 4 ticks / second, while the slow process runs at 1 tick / second. Despite this variance in clock speeds, the slow process and the faster processes have the same logical clock time after the 1 minute period. In trials 5 and 7, however, the message queue was overloaded and the logical clock of the slowest process was not able to keep up with the faster processes over the same time interval. 
+    
+\end{itemize}
+
+
+\section{VI. Unit Testing}
+Finally, we made sure to test our application for robustness against non-Byzantine errors and for correct behavior. First, we realized that our program contained in \texttt{clocks.py} does not have any input-output methods, and instead runs worker methods in several processes and threads that don't return, which either modify data structures (such as our message queue) or print to files (such as $log\{PORT\}.txt$). Thus, we decided the most logical way to test would be using assertions within each method, mainly focusing on tests that our messages were sent and received in a valid format, and that inputs to methods were well-formed. Thus we first checked the validity of configurations before passing them into our "machines" (e.g. processes running the machine method):
+\begin{python}
+def assertConfig(config):
+	'''Check that an input config is valid.'''
+
+	# Validate host address using a regex.
+	# https://www.geeksforgeeks.org/python-
+	# program-to-validate-an-ip-address/.
+	ipRegex = "^((25[0-5]|2[0-4][0-9]|1[0-9]
+			[0-9][1-9]?[0-9])\.){3}"
+	ipRegex += "(25[0-5]|2[0-4][0-9]|1[0-9]
+			[0-9]|[1-9]?[0-9])$"
+	assert(type(config[0]) == str)
+	assert(re.match(ipRegex, config[0]))
+
+	# Check that port is in valid range, and 
+	# that tick size is at least 1.
+	assert(type(config[1]) == int)
+	assert(config[1] >= 0 and 
+		config[1] <= 65535)
+	assert(type(config[1]) == int)
+	assert(config[2] >= 1)
+\end{python}
+
+We also made sure to test the "payload" upon reception through a socket connection --- note that this payload is just a possible logical clock value, so we used the following two tests:
+\begin{python}
+	assert(dataVal.isnumeric())
+	assert(int(dataVal) >= 0)
+\end{python}
+
+We noted that since our logical clock is declared as an integer, this remains invariant, and thus we didn't need to test whether messages were well-formed, because they were just the logical clock value. However, in every area of the code where such claims were less obvious, we made sure to add assertions (all of which passed during runtime). 
+
+Additionally, we used the try-except structure when connecting to sockets, and returned an error message, adding robustness to our program. We also performed other validations, such as checking whether a message received in a consumer thread was empty before adding it to the message queue. Here is one example of the former below:
+\begin{python}
+try:
+	s.connect((HOST,port))
+	sockets.append(s)
+	print("Client-side connection success 
+			to port val:" + str(port) + "\n")
+
+except socket.error as e:
+	print("Error connecting producer: %s" % e)
+\end{python}
 
 
 
